@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-trust-blue: #001F3F;
+  --color-accent-gold: #F9D71C;
+  --color-sky-blue: #00AEEF;
+  --color-light-gray: #F8F9FA;
+  
+  --font-brand: "Alfa Slab One", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-trust-blue bg-white;
+  }
+}
+
+.font-brand {
+  font-family: var(--font-brand);
+}
+
+.text-shadow-gold {
+  text-shadow: 2px 2px 0px var(--color-sky-blue);
+}
+
+.sticky-cta {
+  @apply fixed bottom-0 left-0 right-0 bg-accent-gold text-trust-blue p-4 text-center font-bold z-50 sm:hidden;
+}
